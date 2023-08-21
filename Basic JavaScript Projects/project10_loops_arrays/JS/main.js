@@ -1,3 +1,13 @@
+function call_loop() {
+    var digit = "";
+    var x = 1;
+    while (x < 11) {
+        digit += "<br>" + x;
+        x++;
+    }
+    document.getElementById("loop").innerHTML = digit;
+}
+
 var instruments = ["Trumpet", "Flute", "Piano", "Saxophone", "Triangle", "Guitar", "Bass"];
 var content = "";
 var Y;
