@@ -55,7 +55,7 @@ function checkWinConditions() {
     else if (arrayIncludes('2O', '5O', '8O')) { drawWinLine(508, 50, 508, 558) }
     else if (arrayIncludes('6O', '4O', '2O')) { drawWinLine(100, 508, 510, 90) }
     else if (arrayIncludes('0O', '4O', '8O')) { drawWinLine(100, 100, 520, 520) }
-    else if (selectedSquares.lenght >= 9) {
+    else if (selectedSquares.length >= 9) {
         audio('./media/tie.mp3');
         setTimeout(function () { resetGame(); }, 500);
     }
@@ -116,7 +116,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     animateLineDrawing();
     setTimeout(function () { clear(); resetGame(); }, 1000);
 }
-function resetGame () {
+function resetGame() {
     for (let i = 0; i < 9; i++) {
         let square = document.getElementById(String(i));
         square.style.backgroundImage = '';
